@@ -46,7 +46,8 @@ start() ->
                    _       -> lists:keyreplace(included_applications, 1, Keys,
                                                {included_applications, [App]})
                end,
-    application:load({application, logging, InclKeys}),
+    application:unload(logging_api),
+    application:load({application, logging_api, InclKeys}),
     appstart:start(logging).
 
 init() ->
