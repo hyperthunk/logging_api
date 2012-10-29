@@ -1,0 +1,9 @@
+{application, logging_api,
+ [
+  {description, "An API for Logging"},
+  {vsn, "0.0.1"},
+  {registered, [logging_sup]},
+  {applications, [kernel, stdlib, sasl]},
+  {env, [{start_args, []},
+         {backend, logging}]}
+ ]}.
