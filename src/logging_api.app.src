@@ -4,6 +4,7 @@
   {vsn, "0.0.1"},
   {registered, [logging_sup]},
   {applications, [kernel, stdlib, sasl]},
+  {mod, {application_starter, [logging_app, []]}},
   {env, [{start_args, []},
          {backend, logging}]}
  ]}.
